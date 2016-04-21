@@ -1,0 +1,13 @@
+
+
+{
+  "desired":{
+    "temperature": 12,
+    "led_state": true
+  },
+
+  "reported": {
+    "temperature": 12,
+    "led_state": true
+  }
+}
