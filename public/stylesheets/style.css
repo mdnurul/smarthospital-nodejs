@@ -1,0 +1,52 @@
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+.led_sec{ margin:0 0 20px}
+.form-control{ height:50px;}
+.input-group-addon {
+  background-color: #f0ad4e;
+  border: 1px solid #f0ad4e;
+  color: #fff;
+  font-size: 20px;
+}
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  padding: 14px 24px;
+  font-size: 21px;
+  width:100%;
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+@media (max-width: 767px) and (min-width: 320px) {
+  .jumbotron .btn{ margin:0 0 15px; padding:10px 0;}
+  .input-group-addon{ font-size:14px;}
+  .led_sec{margin:0 0 10px;}
+
+}
