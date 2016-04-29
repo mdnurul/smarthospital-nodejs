@@ -26,13 +26,17 @@ router.post('/ledon', function(req, res) {
 
   console.log("LED on post Called...");
 
-
+//'ws://test.mosca.io'
+    /*
   var client = mqtt.connect(mqtt_url.port, mqtt_url.hostname, {
     username: auth[0],
     password: auth[1]
   });
+     */
+    var client  = mqtt.connect('ws://test.mosca.io');
 
-  var desired = {led : true};
+
+    var desired = {led : true};
   client.on('connect', function() {
     client.publish('/hub/control',desired, function() {
       client.end();
@@ -48,12 +52,15 @@ router.post('/ledoff', function(req, res) {
 
   console.log("LED off post Called...");
 
-
+    /*
   var client = mqtt.connect(mqtt_url.port, mqtt_url.hostname, {
     username: auth[0],
     password: auth[1]
   });
+     */
 
+
+    var client  = mqtt.connect('ws://test.mosca.io');
   var desired = {led : false};
   client.on('connect', function() {
     client.publish('/hub/control', desired, function() {
