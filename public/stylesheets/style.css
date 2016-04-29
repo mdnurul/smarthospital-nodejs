@@ -1,14 +1,21 @@
+<<<<<<< HEAD
 
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   padding-top: 20px;
   padding-bottom: 20px;
+=======
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+>>>>>>> e49409757fd0378a575563fef980903abf1bb3e4
 }
 
 a {
   color: #00B7FF;
 }
+<<<<<<< HEAD
 
 
 .led_sec{ margin:0 0 20px}
@@ -50,3 +57,5 @@ a {
   .led_sec{margin:0 0 10px;}
 
 }
+=======
+>>>>>>> e49409757fd0378a575563fef980903abf1bb3e4

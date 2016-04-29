@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 var express = require('express');
 var router = express.Router();
@@ -13,12 +14,21 @@ router.get('/', function(req, res, next) {
   res.render('index1', { title1: 'Smart Hospital' });
 
 
+=======
+var express = require('express');
+var router = express.Router();
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { title1: 'Smart Hospital' });
+>>>>>>> e49409757fd0378a575563fef980903abf1bb3e4
 });
 
 router.get('/home', function(req, res, next) {
   res.render('home', { title1: 'Advance Integrated Tech Lab' });
 });
 
+<<<<<<< HEAD
 // Parse
 var mqtt_url = url.parse(process.env.CLOUDMQTT_URL || 'mqtt://localhost:1883');
 var auth = (mqtt_url.auth || ':').split(':');
@@ -71,4 +81,6 @@ router.post('/ledoff', function(req, res) {
 
 
 
+=======
+>>>>>>> e49409757fd0378a575563fef980903abf1bb3e4
 module.exports = router;

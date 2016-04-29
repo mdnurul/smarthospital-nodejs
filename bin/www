@@ -4,6 +4,7 @@
  * Module dependencies.
  */
 
+<<<<<<< HEAD
 var express = require('express');
 var app = require('../app');
 var debug = require('debug')('MyExpressApp:server');
@@ -15,6 +16,12 @@ var os = require('os');
 var url = require('url');
 var mqtt = require('mqtt');
 
+=======
+var app = require('../app');
+var debug = require('debug')('MyExpressApp:server');
+var http = require('http');
+
+>>>>>>> e49409757fd0378a575563fef980903abf1bb3e4
 /**
  * Get port from environment and store in Express.
  */
@@ -22,16 +29,22 @@ var mqtt = require('mqtt');
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e49409757fd0378a575563fef980903abf1bb3e4
 /**
  * Create HTTP server.
  */
 
 var server = http.createServer(app);
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e49409757fd0378a575563fef980903abf1bb3e4
 /**
  * Listen on provided port, on all network interfaces.
  */

@@ -8,10 +8,14 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
+<<<<<<< HEAD
 
 
 var app = express();
 //var router = express.Router();
+=======
+var app = express();
+>>>>>>> e49409757fd0378a575563fef980903abf1bb3e4
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -25,6 +29,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+<<<<<<< HEAD
 
 
 app.use('/', routes);
@@ -38,6 +43,11 @@ router.get('/', function(req, res, next) {
 
  */
 
+=======
+app.use('/', routes);
+app.use('/users', users);
+
+>>>>>>> e49409757fd0378a575563fef980903abf1bb3e4
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -70,7 +80,10 @@ app.use(function(err, req, res, next) {
 });
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> e49409757fd0378a575563fef980903abf1bb3e4
 module.exports = app;
