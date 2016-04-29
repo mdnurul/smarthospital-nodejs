@@ -1,5 +1,3 @@
-
-
 var express = require('express');
 var router = express.Router();
 var app = express();
@@ -10,11 +8,10 @@ var mqtt = require('mqtt');
 var http = require('http');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', function (req, res, next) {
     res.render('index1', {title1: 'Smart Hospital'});
 
 });
-
 
 
 // Parse
@@ -22,58 +19,56 @@ var mqtt_url = url.parse(process.env.CLOUDMQTT_URL || 'mqtt://localhost:1883');
 var auth = (mqtt_url.auth || ':').split(':');
 
 
-router.post('/ledon', function(req, res) {
+router.post('/ledon', function (req, res) {
 
-  console.log("LED on post Called...");
+    console.log("LED on post Called...");
 
-//'ws://test.mosca.io'
+    //'ws://test.mosca.io'
     /*
-  var client = mqtt.connect(mqtt_url.port, mqtt_url.hostname, {
-    username: auth[0],
-    password: auth[1]
-  });
+     var client = mqtt.connect(mqtt_url.port, mqtt_url.hostname, {
+     username: auth[0],
+     password: auth[1]
+     });
      */
-    var client  = mqtt.connect('ws://test.mosca.io');
+    var client = mqtt.connect('ws://test.mosca.io');
 
-
-    var desired = {led : true};
-  client.on('connect', function() {
-    client.publish('/hub/control',desired, function() {
-      client.end();
-      res.writeHead(204, { 'Connection': 'keep-alive' });
-      res.end();
+    var desired = {led: true};
+    client.on('connect', function () {
+        client.publish('/hub/control', JSON.stringify(desired), function () {
+            client.end();
+            res.writeHead(204, {'Connection': 'keep-alive'});
+            res.end();
+        });
     });
-  });
 
-  /**/
+    /**/
 });
 
-router.post('/ledoff', function(req, res) {
+router.post('/ledoff', function (req, res) {
 
-  console.log("LED off post Called...");
+    console.log("LED off post Called...");
 
     /*
-  var client = mqtt.connect(mqtt_url.port, mqtt_url.hostname, {
-    username: auth[0],
-    password: auth[1]
-  });
+     var client = mqtt.connect(mqtt_url.port, mqtt_url.hostname, {
+     username: auth[0],
+     password: auth[1]
+     });
      */
 
 
-    var client  = mqtt.connect('ws://test.mosca.io');
-  var desired = {led : false};
-  client.on('connect', function() {
-    client.publish('/hub/control', desired, function() {
-      client.end();
-      res.writeHead(204, { 'Connection': 'keep-alive' });
-      res.end();
+    var client = mqtt.connect('ws://test.mosca.io');
+    var desired = {led: false};
+    client.on('connect', function () {
+        client.publish('/hub/control', JSON.stringify(desired), function () {
+            client.end();
+            res.writeHead(204, {'Connection': 'keep-alive'});
+            res.end();
+        });
     });
-  });
 
-  /**/
+    /**/
 
 });
-
 
 
 module.exports = router;
