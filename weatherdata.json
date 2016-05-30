@@ -1,0 +1,161 @@
+{
+  "query": {
+    "count": 1,
+    "created": "2016-05-30T10:01:41Z",
+    "lang": "en-US",
+    "diagnostics": {
+      "publiclyCallable": "true",
+      "url": {
+        "execution-start-time": "1",
+        "execution-stop-time": "8",
+        "execution-time": "7",
+        "content": "http://weather-ydn-yql.media.yahoo.com:4080/v3/public/weather/rss?w=2295386"
+      },
+      "user-time": "8",
+      "service-time": "7",
+      "build-version": "0.2.3"
+    },
+    "results": {
+      "channel": {
+        "units": {
+          "distance": "mi",
+          "pressure": "in",
+          "speed": "mph",
+          "temperature": "F"
+        },
+        "title": "Yahoo! Weather - Kolkata, WB, IN",
+        "link": "http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2295386/",
+        "description": "Yahoo! Weather for Kolkata, WB, IN",
+        "language": "en-us",
+        "lastBuildDate": "Mon, 30 May 2016 03:31 PM IST",
+        "ttl": "60",
+        "location": {
+          "city": "Kolkata",
+          "country": "India",
+          "region": " WB"
+        },
+        "wind": {
+          "chill": "97",
+          "direction": "158",
+          "speed": "11"
+        },
+        "atmosphere": {
+          "humidity": "65",
+          "pressure": "999.0",
+          "rising": "0",
+          "visibility": "16.1"
+        },
+        "astronomy": {
+          "sunrise": "4:52 am",
+          "sunset": "6:17 pm"
+        },
+        "image": {
+          "title": "Yahoo! Weather",
+          "width": "142",
+          "height": "18",
+          "link": "http://weather.yahoo.com",
+          "url": "http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"
+        },
+        "item": {
+          "title": "Conditions for Kolkata, WB, IN at 02:30 PM IST",
+          "lat": "22.54994",
+          "long": "88.371582",
+          "link": "http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2295386/",
+          "pubDate": "Mon, 30 May 2016 02:30 PM IST",
+          "condition": {
+            "code": "30",
+            "date": "Mon, 30 May 2016 02:30 PM IST",
+            "temp": "97",
+            "text": "Partly Cloudy"
+          },
+          "forecast": [
+            {
+              "code": "4",
+              "date": "30 May 2016",
+              "day": "Mon",
+              "high": "95",
+              "low": "82",
+              "text": "Thunderstorms"
+            },
+            {
+              "code": "4",
+              "date": "31 May 2016",
+              "day": "Tue",
+              "high": "95",
+              "low": "82",
+              "text": "Thunderstorms"
+            },
+            {
+              "code": "4",
+              "date": "01 Jun 2016",
+              "day": "Wed",
+              "high": "95",
+              "low": "82",
+              "text": "Thunderstorms"
+            },
+            {
+              "code": "4",
+              "date": "02 Jun 2016",
+              "day": "Thu",
+              "high": "91",
+              "low": "80",
+              "text": "Thunderstorms"
+            },
+            {
+              "code": "4",
+              "date": "03 Jun 2016",
+              "day": "Fri",
+              "high": "90",
+              "low": "79",
+              "text": "Thunderstorms"
+            },
+            {
+              "code": "4",
+              "date": "04 Jun 2016",
+              "day": "Sat",
+              "high": "91",
+              "low": "80",
+              "text": "Thunderstorms"
+            },
+            {
+              "code": "4",
+              "date": "05 Jun 2016",
+              "day": "Sun",
+              "high": "89",
+              "low": "80",
+              "text": "Thunderstorms"
+            },
+            {
+              "code": "4",
+              "date": "06 Jun 2016",
+              "day": "Mon",
+              "high": "85",
+              "low": "80",
+              "text": "Thunderstorms"
+            },
+            {
+              "code": "4",
+              "date": "07 Jun 2016",
+              "day": "Tue",
+              "high": "87",
+              "low": "80",
+              "text": "Thunderstorms"
+            },
+            {
+              "code": "4",
+              "date": "08 Jun 2016",
+              "day": "Wed",
+              "high": "87",
+              "low": "80",
+              "text": "Thunderstorms"
+            }
+          ],
+          "description": "<![CDATA[<img src=\"http://l.yimg.com/a/i/us/we/52/30.gif\"/>\n<BR />\n<b>Current Conditions:</b>\n<BR />Partly Cloudy\n<BR />\n<BR />\n<b>Forecast:</b>\n<BR /> Mon - Thunderstorms. High: 95Low: 82\n<BR /> Tue - Thunderstorms. High: 95Low: 82\n<BR /> Wed - Thunderstorms. High: 95Low: 82\n<BR /> Thu - Thunderstorms. High: 91Low: 80\n<BR /> Fri - Thunderstorms. High: 90Low: 79\n<BR />\n<BR />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2295386/\">Full Forecast at Yahoo! Weather</a>\n<BR />\n<BR />\n(provided by <a href=\"http://www.weather.com\" >The Weather Channel</a>)\n<BR />\n]]>",
+          "guid": {
+            "isPermaLink": "false"
+          }
+        }
+      }
+    }
+  }
+}

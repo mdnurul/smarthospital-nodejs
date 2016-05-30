@@ -38,7 +38,8 @@ html(lang='en')
                         .col-md-12
                             .input-group
                                 span#basic-addon3.input-group-addon Temp / Humidity
-                                input#basic-url.form-control(type='text', aria-describedby='basic-addon3')
+                                span#temphum.form-control( aria-describedby='basic-addon3')
+
 
 
         // /container
@@ -55,14 +56,36 @@ html(lang='en')
                         $.post("/ledon")
                     });
                 });
-            });
-            $(document).ready(function () {
+
                 $(function () {
                     $("#ledoff").click(function (e) {
                         console.log('LED OFF');
                         $.post("/ledoff")
                     });
                 });
+            });
+
+            $(document).ready(function () {
+
+                //Temparature:95 F Humidity:70 %
+
+                setInterval(function () {
+
+                    var url = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%3D2295386&format=json&diagnostics=true&callback=";
+
+                    $.getJSON(url, function (data) {
+                        console.log("Weather:", data);
+                        var temperature = "Temparature:"+data.query.results.channel.item.condition.temp + " F";
+                        var humidity = "Humidity:" + data.query.results.channel.atmosphere.humidity + " %";
+                        $("#temphum").html(temperature + "   "+humidity);
+                    });
+
+
+                },60000);
+
+                $("#temphum").html("Temparature:-- F Humidity:-- %");
+
+
             });
 
 
